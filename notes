@@ -1,0 +1,50 @@
+<script>
+  document.addEventListener("contextmenu", function(event){
+  event.preventDefault();
+  alert('Right Click is Disabled...😂😂');    
+  }, false);
+  document.body.addEventListener('keydown', event => {
+  if ((event.ctrlKey && 'acpsuvwxz'.indexOf(event.key) !== -1)|| (event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+    event.preventDefault()
+    alert("This Feature is Disabled...😂😂");
+  }
+})
+
+  function reEnable() {
+    alert("Text Selection is Disabled 😂😂😂");
+  }
+
+  document.onselectstart = new Function ("return false")
+
+  if (window.sidebar) {
+    document.onmousedown = disableselect
+    document.onclick = reEnable
+  }
+</script>
+
+
+<?php
+  require 'connection.php';
+  if(isset($_POST['submit'])){
+     $name = $_POST['name'];
+     $subject = $_POST['Subject'];
+     $email = $_POST['replyto'];
+     $message = $_POST['message'];
+     $sql = "INSERT INTO contact_data VALUES (NULL, '$name', '$subject', '$email', '$message', current_timestamp())";
+     $result = mysqli_query($conn, $sql);
+     if($result){
+        echo "<script>Swal.fire(
+          'Message Sent',
+          'Message Sent Sussessfully, Please Wait for Sometime',
+          'success'
+        )</script>";
+     }
+     else{
+      echo "<script>Swal.fire(
+        'Message Not Sent',
+        'Message Could'nt be Sent, Please try again later',
+        'error'
+      )</script>";
+     }
+  }
+?>
