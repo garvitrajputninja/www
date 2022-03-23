@@ -280,10 +280,11 @@
           <div class="col-md-9">
             <div class="card mb-0" data-aos="zoom-in">
               <div class="h4 text-center title">Contact Me</div>
+              <div class="h6 text-center alert alert-danger">Please Don't Submit This form, this will not work <br> Just Contact me on my Given Email</div>
               <div class="row">
                 <div class="col-md-6">
                   <div class="card-body">
-                    <form action="" method="POST" id="form" name="form">
+                    <form  method="POST" id="form" name="form">
                       <div class="p pb-3"><strong>Feel free to contact me </strong></div>
                       <div class="row mb-3">
                         <div class="col">
@@ -315,7 +316,7 @@
                       </div>
                       <div class="row">
                         <div class="col">
-                          <button class="btn btn-primary" id="submit" name ="submit" type="submit">Send</button>
+                          <button class="btn btn-primary" id="submit" name ="submit" onclick="showAlert()" type="submit">Send</button>
                         </div>
                       </div>
                     </form>
@@ -357,6 +358,9 @@
   </body>
 </html>
 <script>
+  function showAlert(){
+    alert("Please Contact on Given Email ID or Contact Number. Thank You");
+  }
  document.addEventListener("contextmenu", function(event){
   event.preventDefault();
   alert('Right Click is Disabled...😂😂');    
@@ -379,3 +383,4 @@
     document.onclick = reEnable
   }
 </script>
+<script type="text/javascript">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"717628a61e699ae0e43918d0fc6157f21c723bbf62395a1104f5a293e1669f3c3cfeb81398f228f375278983cd00a07a", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
