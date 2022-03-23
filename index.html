@@ -363,17 +363,17 @@
   }
  document.addEventListener("contextmenu", function(event){
   event.preventDefault();
-  alert('Right Click is Disabled');    
+  alert('Action Not Allowed');    
   }, false);
   document.body.addEventListener('keydown', event => {
   if ((event.ctrlKey && 'acpsuvwxz'.indexOf(event.key) !== -1)|| (event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
     event.preventDefault()
-    alert("This Feature is Disabled");
+    alert("Action Not Allowed);
   }
 })
 
   function reEnable() {
-    alert("Text Selection is Disabled");
+    alert("Action Not Allowed");
   }
 
   document.onselectstart = new Function ("return false")
