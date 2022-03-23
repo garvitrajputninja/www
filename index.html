@@ -361,14 +361,14 @@
   function showAlert(){
     alert("Please Contact on Given Email ID or Contact Number. Thank You");
   }
- document.addEventListener("contextmenu", function(event){
+document.addEventListener("contextmenu", function(event){
   event.preventDefault();
-  alert('Action Not Allowed');    
+  alert("Action Not Allowed");    
   }, false);
   document.body.addEventListener('keydown', event => {
   if ((event.ctrlKey && 'acpsuvwxz'.indexOf(event.key) !== -1)|| (event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
     event.preventDefault()
-    alert("Action Not Allowed);
+    alert("Action Not Allowed");
   }
 })
 
